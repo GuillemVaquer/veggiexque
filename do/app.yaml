@@ -1,7 +1,0 @@
-name: veggiexque
-services:
-  - name: web
-    http_port: 8080
-    run_command: php-fpm
-    build_command: composer install --no-dev --optimize-autoloader
-    document_root: public
