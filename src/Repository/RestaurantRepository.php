@@ -14,11 +14,11 @@ class RestaurantRepository extends ServiceEntityRepository
     public function searchByQuery(string $query): array
     {
         return $this->createQueryBuilder('r')
-            ->leftJoin('r.province', 'p') // Join Province entity
-            ->where('r.name LIKE :query')
-            ->orWhere('r.address LIKE :query')
-            ->orWhere('p.name LIKE :query') // Search by province name
-            ->setParameter('query', '%' . $query . '%')
+            ->leftJoin('r.province', 'p')
+            ->where('LOWER(r.name) LIKE LOWER(:query)')
+            ->orWhere('LOWER(r.address) LIKE LOWER(:query)')
+            ->orWhere('LOWER(p.name) LIKE LOWER(:query)')
+            ->setParameter('query', '%' . strtolower($query) . '%')
             ->getQuery()
             ->getResult();
     }
