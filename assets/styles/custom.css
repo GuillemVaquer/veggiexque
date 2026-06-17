@@ -1,0 +1,103 @@
+
+
+.bg-secondary{
+    background-color: #FEFAE0 !important;
+}
+
+.bg-primary{
+    background-color: #aab978 !important;
+}
+
+.border-primary{
+    border-color: #aab978 !important;
+}
+
+.bg-primary .nav-link {
+    color: white !important; /* White text for contrast */
+}
+
+.navbar-primary{
+    background-color: #aab978 !important;
+}
+
+.btn-secondary{
+    background-color: #aab978 !important;
+}
+
+
+
+
+
+
+    /* Custom Navbar Background Color */
+.navbar {
+    background-color: #aab978 !important;
+}
+
+/* Navbar Brand (Logo/Text) Color */
+.navbar-brand {
+    color: #fefae0 !important;
+}
+
+/* Navbar Links Color */
+.navbar-nav .nav-link {
+    color: white !important;
+    text-align: center !important;
+}
+
+/*Within the hamburger menu, makes sure the province dropdown is wide*/
+@media (max-width: 991.98px) {
+  #navbarSupportedContent > .dropdown {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+  #navbarSupportedContent > .dropdown .dropdown-menu {
+    width: calc(100% + 2rem) !important;
+    left: -1rem !important;
+    right: -1rem !important;
+    min-width: 100% !important;
+  }
+}
+
+/* Navbar Links Hover Color
+.navbar-nav .nav-link:hover {
+    color: #your-hover-color !important;
+}
+
+/* Navbar Links Active Color
+.navbar-nav .nav-link.active {
+    color: #your-active-color !important;
+    background-color: #your-active-bg-color !important;
+}*/
+
+/* Navbar Toggle Button (Mobile) Color
+.navbar-toggler {
+    border-color: #your-toggler-border-color !important;
+} */
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dropdown Menu Background and Text Color
+.dropdown-menu {
+    background-color: #your-dropdown-bg-color !important;
+    border-color: #your-dropdown-border-color !important;
+}
+
+.dropdown-menu .dropdown-item {
+    color: #your-dropdown-text-color !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #your-dropdown-hover-bg-color !important;
+    color: #your-dropdown-hover-text-color !important;
+}
+
+/* Navbar Collapse Background (Mobile)
+.navbar-collapse {
+    background-color: #your-collapse-bg-color !important;
+} */
+
+
+
