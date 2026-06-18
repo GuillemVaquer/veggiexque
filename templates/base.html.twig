@@ -15,7 +15,7 @@
             <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
         {% endblock %}
         </head>
-    <body class="bg-secondary">
+    <body class="bg-secondary d-flex flex-column vh-100">
 
     <div class="banner flex-center bg-primary p-3">
     <h1 class="text-white text-lg text-center display-1 p-3"><a class="text-decoration-none text-white" href={{ path('app_home') }}>Veggiexque</a></h1>
@@ -51,12 +51,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">            
                 <div class="navbar-nav me-auto ">
-                    <button class="btn btn-secondary"><a class="nav-link p-1" href="{{ path('app_contact')}}">Contacte</a></button>
-                    <button class="btn btn-secondary"><a class="nav-link p-1" href="{{ path('app_blog')}}">Blog</a></button>
+                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}"><a class="nav-link p-1" href="{{ path('app_contact')}}">Contacte</a></button>
+                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_blog' %}active{% endif %}"><a class="nav-link p-1" href="{{ path('app_blog')}}">Blog</a></button>
                 </div>
 
                 <div class="dropdown text-center d-none d-lg-block">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-secondary dropdown-toggle {% if app.request.attributes.get('_route') == 'app_restaurants_by_province' %}active{% endif %}" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Província
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">    
@@ -101,7 +101,7 @@
 
 
 
-    <footer class="bg-primary text-white d-flex justify-content-center p-4">
+    <footer class="bg-primary text-white d-flex justify-content-center p-4 mt-auto">
         <p>
             <a href="https://veggiexque.es" class="text-white">Veggiexque</a> © 2026 by  <a href="https://example.com" class="text-white">Guillem Vaquer Nebot</a>
             is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="text-white">CC BY-NC-ND 4.0</a>

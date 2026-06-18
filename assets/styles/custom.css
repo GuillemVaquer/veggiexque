@@ -24,7 +24,11 @@
     background-color: #aab978 !important;
 }
 
-
+.btn.active {
+    background-color: white;
+    border-color: white;
+    color: white;
+}
 
 
 
