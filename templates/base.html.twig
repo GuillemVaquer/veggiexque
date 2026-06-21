@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="cat">
+<html lang="ca">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="{{ asset('/media/favicon/favicon.ico') }}">
         <meta name="description" content="En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la teua zona. Utilitza el nostre mapa o busca per província.">
         <title>{% block title %}Veggiexque: Restaurants vegetarians i vegans per província i prop teu{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('styles/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('styles/custom.css') }}">
@@ -52,8 +52,10 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">            
                 <div class="navbar-nav me-auto ">
-                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %} m-1"><a class="nav-link p-1" href="{{ path('app_contact')}}">Contacte</a></button>
-                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_blog' %}active{% endif %} m-1"><a class="nav-link p-1" href="{{ path('app_blog')}}">Blog</a></button>
+                    <a class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %} m-1"
+                        href="{{ path('app_contact') }}">Contacte</a>
+                    <a class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_blog' %}active{% endif %} m-1" 
+                        href="{{ path('app_blog') }}">Blog</a>
                 </div>
 
                 <div class="dropdown text-center d-none d-lg-block">
