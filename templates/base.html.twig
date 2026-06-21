@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <meta name="description" content="En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la teua zona. Utilitza el nostre mapa o busca per província.">
+        <title>{% block title %}Veggiexque: Restaurants vegetarians i vegans per província i prop teu{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('styles/bootstrap.min.css') }}">
@@ -20,7 +21,7 @@
     <div class="banner flex-center bg-primary p-3">
     <h1 class="text-white text-lg text-center display-1 p-3"><a class="text-decoration-none text-white" href={{ path('app_home') }}>Veggiexque</a></h1>
 
-    <nav class="navbar navbar-primary navbar-expand-lg text-white justify-contents-space-between">
+    <nav class="navbar navbar-primary navbar-expand-lg justify-contents-space-between">
             <div class="container-fluid justify-content-between">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,8 +52,8 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">            
                 <div class="navbar-nav me-auto ">
-                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %}"><a class="nav-link p-1" href="{{ path('app_contact')}}">Contacte</a></button>
-                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_blog' %}active{% endif %}"><a class="nav-link p-1" href="{{ path('app_blog')}}">Blog</a></button>
+                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %} m-1"><a class="nav-link p-1" href="{{ path('app_contact')}}">Contacte</a></button>
+                    <button class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_blog' %}active{% endif %} m-1"><a class="nav-link p-1" href="{{ path('app_blog')}}">Blog</a></button>
                 </div>
 
                 <div class="dropdown text-center d-none d-lg-block">
@@ -96,6 +97,10 @@
             </div>
 
         </div>
+
+        <br>
+        <br>
+        <br>
 
     </div>
 
