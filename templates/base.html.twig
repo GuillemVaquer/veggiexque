@@ -18,10 +18,10 @@
         </head>
     <body class="bg-secondary d-flex flex-column">
 
-    <div class="banner flex-center bg-primary p-3">
+    <div class="banner d-flex flex-column align-items-center bg-primary p-3 w-100">
     <h1 class="text-white text-lg text-center display-1 p-3"><a class="text-decoration-none text-white" href={{ path('app_home') }}>Veggiexque</a></h1>
 
-    <nav class="navbar navbar-primary navbar-expand-lg justify-contents-space-between">
+    <nav class="navbar navbar-primary navbar-expand-lg ">
             <div class="container-fluid justify-content-between">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -92,20 +92,18 @@
     </nav>
     </div>
 
-    <div class="container-lg p-3 flex-center bg-secondary">
+    <div class="container-lg p-3 bg-secondary">
 
     {% block sentence %}{% endblock %}
 
-        <div class="d-grid gap-3">
-            <div class="row justify-content-center">
-
-
-                              
+        <div class="d-flex justify-content-center">
+            <div class="">                              
                         {% block body %}{% endblock %}
             </div>
 
         </div>
 
+        <br>
         <br>
         <br>
         <br>
