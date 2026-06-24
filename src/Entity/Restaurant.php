@@ -47,6 +47,12 @@ class Restaurant
     #[ORM\ManyToOne(inversedBy: 'restaurants')]
     private ?City $city = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $searchName = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $searchAddress = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +66,7 @@ class Restaurant
     public function setName(string $name): static
     {
         $this->name = $name;
+        $this->searchName = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', strtolower($name));
 
         return $this;
     }
@@ -84,6 +91,7 @@ class Restaurant
     public function setAddress(string $address): static
     {
         $this->address = $address;
+        $this->searchAddress = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', strtolower($address));
 
         return $this;
     }
@@ -180,6 +188,30 @@ class Restaurant
     public function setCity(?City $city): static
     {
         $this->city = $city;
+
+        return $this;
+    }
+
+    public function getSearchName(): ?string
+    {
+        return $this->searchName;
+    }
+
+    public function setSearchName(string $searchName): static
+    {
+        $this->searchName = $searchName;
+
+        return $this;
+    }
+
+    public function getSearchAddress(): ?string
+    {
+        return $this->searchAddress;
+    }
+
+    public function setSearchAddress(string $searchAddress): static
+    {
+        $this->searchAddress = $searchAddress;
 
         return $this;
     }

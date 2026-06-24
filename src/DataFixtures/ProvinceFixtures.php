@@ -14,6 +14,7 @@ class ProvinceFixtures extends Fixture
         foreach ( ProvinceList::$provinces as $myProvince) {
             $province = new Province();
             $province->setName($myProvince['name']);
+            $province->setSearchName($myProvince['searchName']);
             $province->setSlug($myProvince['slug']);
             $manager->persist($province);
 

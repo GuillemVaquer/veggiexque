@@ -11,18 +11,21 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class RestaurantRepository extends ServiceEntityRepository
 {
+    
     public function searchByQuery(string $query): array
     {
+        $normalizedQuery = iconv('UTF-8', 'ASCII//TRANSLIT//IGNORE', strtolower($query));
+
         return $this->createQueryBuilder('r')
             ->leftJoin('r.province', 'p')
-            ->where('LOWER(r.name) LIKE LOWER(:query)')
-            ->orWhere('LOWER(r.address) LIKE LOWER(:query)')
-            ->orWhere('LOWER(p.name) LIKE LOWER(:query)')
-            ->setParameter('query', '%' . strtolower($query) . '%')
+            ->where('r.searchName LIKE :query')
+            ->orWhere('r.searchAddress LIKE :query')
+            ->orWhere('p.searchName LIKE :query')
+            ->setParameter('query', '%' . $normalizedQuery . '%')
             ->getQuery()
             ->getResult();
     }
-
+    
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Restaurant::class);

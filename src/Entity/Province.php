@@ -27,6 +27,9 @@ class Province
     #[ORM\OneToMany(targetEntity: Restaurant::class, mappedBy: 'province')]
     private Collection $restaurants;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $searchName = null;
+
     public function __construct()
     {
         $this->restaurants = new ArrayCollection();
@@ -87,6 +90,18 @@ class Province
                 $restaurant->setProvince(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSearchName(): ?string
+    {
+        return $this->searchName;
+    }
+
+    public function setSearchName(string $searchName): static
+    {
+        $this->searchName = $searchName;
 
         return $this;
     }
