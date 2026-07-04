@@ -1,11 +1,12 @@
+{% trans_default_domain 'app' %}
 <!DOCTYPE html>
 <html lang="ca">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="{{ asset('/media/favicon/favicon.ico') }}">
-        <meta name="description" content={% block description %}"En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la teua zona. Utilitza el nostre mapa o busca per província."{% endblock %}>
-        <title>{% block title %}Veggiexque: Restaurants vegetarians i vegans per província i prop teu{% endblock %}</title>
+        <meta name="description" content={% block description %}{{ "En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la teua zona. Utilitza el nostre mapa o busca per província."|trans }}{% endblock %}>
+        <title>{% block title %}{{ "Veggiexque: Restaurants vegetarians i vegans per província i prop teu"|trans }}{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="{{ asset('styles/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('styles/custom.css') }}">
@@ -30,7 +31,7 @@
                 <!-- Province dropdown (ALWAYS VISIBLE) -->
             <div class="dropdown text-center d-lg-none">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Província
+                    {{ "Província"|trans }}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     {% for province in provinces %}
@@ -56,14 +57,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">            
                 <div class="navbar-nav me-auto ">
                     <a class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_contact' %}active{% endif %} m-1"
-                        href="{{ path('app_contact') }}">Contacte</a>
+                        href="{{ path('app_contact') }}">{{ "Contacte"|trans }}</a>
                     <a class="btn btn-secondary {% if app.request.attributes.get('_route') == 'app_blog' %}active{% endif %} m-1" 
-                        href="{{ path('app_blog') }}">Blog</a>
+                        href="{{ path('app_blog') }}">{{ "Blog"|trans }}</a>
                 </div>
 
                 <div class="dropdown text-center d-none d-lg-block">
                     <button class="btn btn-secondary dropdown-toggle {% if app.request.attributes.get('_route') == 'app_restaurants_by_province' %}active{% endif %}" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Província
+                                    {{"Província"|trans }}
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">    
 
@@ -84,7 +85,7 @@
                             placeholder="Buscar restaurants..."
                             aria-label="Search"
                         >
-                        <button type="submit" class="btn btn-secondary d-flex">Enviar</button>
+                        <button type="submit" class="btn btn-secondary d-flex">{{ "Enviar"|trans }}</button>
                     </div>
                 </form>
             </div>    
@@ -115,7 +116,7 @@
     <footer class="bg-primary text-white d-flex justify-content-center p-4 fixed-bottom">
         <p>
             <a href="https://veggiexque.es" class="text-white">Veggiexque</a> © 2026 by  <a href="https://example.com" class="text-white">Guillem Vaquer Nebot</a>
-            is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="text-white">CC BY-NC-ND 4.0</a>
+            {{ "està registrat baix una llicència"|trans }}}} <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="text-white">CC BY-NC-ND 4.0</a>
             <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Llicència creative commons" style="max-width: 1em;max-height:1em;margin-left: .2em;">
             <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Citar autor" style="max-width: 1em;max-height:1em;margin-left: .2em;">
             <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="Ús no comercial" style="max-width: 1em;max-height:1em;margin-left: .2em;">

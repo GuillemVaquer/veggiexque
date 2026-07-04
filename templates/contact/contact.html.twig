@@ -1,50 +1,41 @@
+{% trans_default_domain 'app' %}
 {% extends 'base.html.twig' %}
 
-{% block description %}"Posat en contacte amb Veggiexque per afegir restaurants a la nostra llista."{% endblock %}
-{% block title %}Veggiexque contacte{% endblock %}
+{% block description %}{{ "Posat en contacte amb Veggiexque per afegir restaurants a la nostra llista."|trans }}{% endblock %}
+{% block title %}{{ 'Veggiexque contacte'|trans }}{% endblock %}
 
 {% block body %}
-
-<p class="text-center m-1"> Contactan's per informar-nos d'algun error en la nostra llista de restaurants o per fer qualsevol altre suggeriment. Moltes gràcies!</p>
+<p class="text-center m-1">
+  {{ 'Contactan\'s per informar-nos d\'algun error en la nostra llista de restaurants o per fer qualsevol altre suggeriment. Moltes gràcies!'|trans }}
+</p>
 
 <div class="container py-4">
-    <form class="mx-auto" style="max-width: 800px;">
-        
-        <div class="row mb-3">
-            <label for="email" class="col-md-2 col-form-label">
-                E-mail
-            </label>
+  <form class="mx-auto" style="max-width: 800px;">
+    <div class="row mb-3">
+      <label for="email" class="col-md-2 col-form-label">
+        {{ 'E-mail'|trans }}
+      </label>
+      <div class="col-md-10">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+      </div>
+    </div>
 
-            <div class="col-md-10">
-                <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="name@example.com">
-            </div>
-        </div>
+    <div class="row mb-3">
+      <label for="message" class="col-md-2 col-form-label">
+        {{ 'Missatge'|trans }}
+      </label>
+      <div class="col-md-10">
+        <textarea class="form-control" id="message" rows="6"></textarea>
+      </div>
+    </div>
 
-        <div class="row mb-3">
-            <label for="message" class="col-md-2 col-form-label">
-                Missatge
-            </label>
-
-            <div class="col-md-10">
-                <textarea
-                    class="form-control"
-                    id="message"
-                    rows="6"></textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-10 offset-md-2">
-                <button type="submit" class="btn btn-secondary">
-                    Enviar
-                </button>
-            </div>
-        </div>
-
-    </form>
+    <div class="row">
+      <div class="col-md-10 offset-md-2">
+        <button type="submit" class="btn btn-secondary">
+          {{ 'Enviar'|trans }}
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
 {% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block description %}"En Veggixque t’ajudem a trobar restaurants 100% vegetarians relacionats amb la cerca '{{ query }}."{% endblock %}
-{% block title %}Resultats per a "{{ query }}"{% endblock %}
+{% block description %}{{ "En Veggixque t’ajudem a trobar restaurants 100% vegetarians relacionats amb la cerca '{{ query }}."|trans }}{% endblock %}
+{% block title %}{{ "Resultats per a "{{ query }}""|trans }}{% endblock %}
 
 {% block sentence %}
 {% endblock %}    
@@ -11,13 +11,13 @@
 
     {% if restaurants|length == 0 %}
         <div class="alert alert-warning">
-            No s'han trobat restaurants buscant "{{ query}}"
+            {{ "No s'han trobat restaurants buscant "{{ query}}""|trans }}
             <br>
             
         </div>
 
     {% else %}
-    <h4 class="m-5 text-center">Resultats per a "{{ query }}"</h4>
+    <h4 class="m-5 text-center">{{ "Resultats per a "{{ query }}""|trans }}</h4>
 
     {% endif %}
 
@@ -34,16 +34,16 @@
                         <div class="d-grid gap-3">
                             <div class="row">
                                 <div class="col-12 col-sm-6 d-flex flex-column align-items-center">
-                                    <img src="{{ asset('media/restaurants/' ~ restaurant.slug ~ '.webp') }}" class="img border border-gray rounded" alt="Foto de {{ restaurant.name }}" height="200" width="200">
+                                    <img src="{{ asset('media/restaurants/' ~ restaurant.slug ~ '.webp') }}" class="img border border-gray rounded" alt={{"Foto de "{{ restaurant.name }}""|trans }} height="200" width="200">
                                     <a href="{{ restaurant.website }}" class="btn btn-secondary rounded text-white w-50 m-3" target="_blank" rel="noopener noreferrer">Web</a>
                                 </div>
                                 <div class="col-12 col-sm-6 d-flex flex-column align-self-center">
-                                    <p class="card-text text-start">Adreça: <a 
+                                    <p class="card-text text-start">{{ "Adreça: "|trans }}<a 
                                         href="https://www.google.com/maps/search/?api=1&query={{ (restaurant.name ~ ', ' ~ restaurant.address ~ ', ' ~ restaurant.province.name ~ ', Spain')|url_encode }}"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         > {{ restaurant.address }}</a></p>
-                                    <p class="card-text text-start">Telèfon: <a href="tel:{{ restaurant.phone|replace({' ': ''}, '') }}">{{ restaurant.phone }}</a></p>
+                                    <p class="card-text text-start">{{ "Telèfon: "|trans }}<a href="tel:{{ restaurant.phone|replace({' ': ''}, '') }}">{{ restaurant.phone }}</a></p>
                                 </div>
                             </div>
                         </div>

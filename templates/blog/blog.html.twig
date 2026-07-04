@@ -1,10 +1,11 @@
+{% trans_default_domain 'app' %}
 {% extends 'base.html.twig' %}
 
-{% block description %}"Entrevistes i reportatges sobre restaurants vegetarians."{% endblock %}
-{% block title %}Veggiexque blog{% endblock %}
+{% block description %}{{ "Entrevistes i reportatges sobre restaurants vegetarians."|trans }}{% endblock %}
+{% block title %}{{ "Veggiexque blog"|trans }}{% endblock %}
 
 {% block body %}
 
-<p>Pròximament</p>
+<p>{{"Pròximament"|trans }}</p>
 
 {% endblock %}
