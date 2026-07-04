@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class InitialController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
+    #[Route('/{_locale}', name: 'app_home')]
     public function index(ProvinceRepository $provinceRepository): Response
     {
         $sentences = [
@@ -34,7 +34,7 @@ final class InitialController extends AbstractController
         ]);
     }
 
-    #[Route('/contact', name: 'app_contact')]
+    #[Route('/{_locale}/contact', name: 'app_contact')]
     public function contact(ProvinceRepository $provinceRepository): Response
     {
             return $this->render('contact/contact.html.twig', [
@@ -43,7 +43,7 @@ final class InitialController extends AbstractController
         ]);
     }
 
-    #[Route('/blog', name: 'app_blog')]
+    #[Route('/{_locale}/blog', name: 'app_blog')]
     public function blog(ProvinceRepository $provinceRepository): Response
     {
             return $this->render('blog/blog.html.twig', [
@@ -52,7 +52,7 @@ final class InitialController extends AbstractController
         ]);
     }
 
-    #[Route('/search', name: 'app_search')]
+    #[Route('/{_locale}/search', name: 'app_search')]
     public function search(Request $request, RestaurantRepository $restaurantRepository, ProvinceRepository $provinceRepository): Response
     {
         $query = $request->query->get('q', '');
@@ -66,7 +66,7 @@ final class InitialController extends AbstractController
         ]);
     }
 
-    #[Route('/restaurants/vegetarians/{province}', name: 'app_restaurants_by_province')]
+    #[Route('/{_locale}/restaurants/vegetarians/{province}', name: 'app_restaurants_by_province')]
     public function show_province(string $province, ProvinceRepository $provinceRepository, RestaurantRepository $restaurantRepository): Response
     {
 

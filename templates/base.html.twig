@@ -47,7 +47,7 @@
                             class="form-control me-2"
                             type="search"
                             name="q"
-                            placeholder="Buscar restaurants..."
+                            placeholder={{"Buscar restaurants..."|trans }}
                             aria-label="Search"
                         >
                         <button type="submit" class="btn btn-secondary d-flex">Enviar</button>
@@ -82,10 +82,42 @@
                             class="form-control me-2"
                             type="search"
                             name="q"
-                            placeholder="Buscar restaurants..."
+                            placeholder={{ "Buscar restaurants..."|trans }}
                             aria-label="Search"
                         >
                         <button type="submit" class="btn btn-secondary d-flex">{{ "Enviar"|trans }}</button>
+                        
+                        {% set flags = {
+                            'es' : 'media/es.svg',
+                            'ca' : 'media/es-ct.svg'
+                        }
+                        %}
+
+                        <div class="dropdown language-dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="{{ asset(flags[app.request.locale]) }}" alt="{{ app.request.locale }}" width="20" height="15" class="flag-icon">
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="Dropdown">
+                                <li>
+                                    <a class="dropdown-item p-1" href="{{ path(
+                                                                                app.request.attributes.get('_route'),
+                                                                                app.request.attributes.get('_route_params')|merge({'_locale': 'ca'})
+                                                                            ) }}">
+                                        <img src="{{ asset('media/es-ct.svg') }}" alt="Català" width="20" height="15" class="flag-icon">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item p-1" href="{{ path(
+                                                                                app.request.attributes.get('_route'),
+                                                                                app.request.attributes.get('_route_params')|merge({'_locale': 'es'})
+                                                                            ) }}">
+                                        <img src="{{ asset('media/es.svg') }}" alt="Español" width="20" height="15" class="flag-icon">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </form>
             </div>    
@@ -116,7 +148,7 @@
     <footer class="bg-primary text-white d-flex justify-content-center p-4 fixed-bottom">
         <p>
             <a href="https://veggiexque.es" class="text-white">Veggiexque</a> © 2026 by  <a href="https://example.com" class="text-white">Guillem Vaquer Nebot</a>
-            {{ "està registrat baix una llicència"|trans }}}} <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="text-white">CC BY-NC-ND 4.0</a>
+            {{ "està registrat baix una llicència"|trans }} <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="text-white">CC BY-NC-ND 4.0</a>
             <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="Llicència creative commons" style="max-width: 1em;max-height:1em;margin-left: .2em;">
             <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="Citar autor" style="max-width: 1em;max-height:1em;margin-left: .2em;">
             <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="Ús no comercial" style="max-width: 1em;max-height:1em;margin-left: .2em;">

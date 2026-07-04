@@ -52,6 +52,12 @@
     
 }
 
+.flag-icon {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-right: 8px !important;
+}
+
 /*Within the hamburger menu, makes sure the province dropdown is wide*/
 @media (max-width: 991.98px) {
   #navbarSupportedContent > .dropdown {
