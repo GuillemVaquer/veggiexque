@@ -52,10 +52,21 @@
     
 }
 
-.flag-icon {
-    display: inline-block !important;
-    vertical-align: middle !important;
-    margin-right: 8px !important;
+.dropdown-menu
+ {
+   max-height: 200px;
+   overflow-y: scroll;
+}
+
+.language-dropdown .dropdown-menu {
+    min-width: auto;
+    width: auto;
+    padding: .25rem;
+}
+
+.language-dropdown .dropdown-item {
+    padding: .25rem;
+    text-align: center;
 }
 
 /*Within the hamburger menu, makes sure the province dropdown is wide*/

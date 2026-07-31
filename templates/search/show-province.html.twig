@@ -1,8 +1,8 @@
 {% trans_default_domain 'app' %}
 {% extends 'base.html.twig' %}
 
-{% block description %}{{ "En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la província de {{ province.name }}."|trans }}{% endblock %}
-{% block title %}{{ "Restaurants 100% vegetarians en {{ province.name }}"|trans }}{% endblock %}
+{% block description %}{{ "En Veggiexque t’ajudem a trobar restaurants 100% vegetarians i vegans en la província de "|trans }}{{ province.name }}.{% endblock %}
+{% block title %}{{ "Restaurants 100% vegetarians en "|trans }}{{ province.name }}{% endblock %}
 
 {% block sentence %}
 {% endblock %}    
@@ -12,13 +12,13 @@
 
     {% if restaurants|length == 0 %}
         <div class="alert alert-warning">
-            {{ "No hi ha restaurants vegetarians {{ province.name }}!"|trans }}
+            {{ "No hi ha restaurants vegetarians en "|trans }}{{ province.name }}!
             <br>
             
         </div>
 
     {% else %}
-    <h4 class="m-5 text-center">{{ "Restaurants 100% vegetarians en {{ province.name }}"|trans }}</h4>
+    <h4 class="m-5 text-center">{{ "Restaurants 100% vegetarians en "|trans }}{{ province.name }}</h4>
 
     {% endif %}
 

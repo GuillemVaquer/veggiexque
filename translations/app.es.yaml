@@ -1,24 +1,32 @@
-'Posat en contacte amb Veggiexque per afegir restaurants a la nostra llista.': 'Ponte en contacto con Veggiexque para añadir restaurantes a nuestra lista.'
-'Veggiexque contacte': 'Contacto Veggiexque'
-"Contactan's per informar-nos d'algun error en la nostra llista de restaurants o per fer qualsevol altre suggeriment. Moltes gràcies!": "Contáctanos para informarnos de algún error en nuestra lista de restaurantes o para hacer cualquier otra sugerencia. ¡Muchas gracias!"
-E-mail: 'Correo electrónico'
-Missatge: Mensaje
-Enviar: Enviar
-'En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la província de {{ province.name }}.': 'En Veggiexque te ayudamos a encontrar restaurantes 100% vegetarianos y veganos en la provincia de {{ province.name }}.'
-'Restaurants 100% vegetarians en {{ province.name }}': 'Restaurantes 100% vegetarianos en {{ province.name }}'
-'No hi ha restaurants vegetarians {{ province.name }}!': '¡No hay restaurantes vegetarianos en {{ province.name }}!'
-'Adreça:': 'Dirección:'
-'Telèfon:': 'Teléfono:'
-'En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la teua zona. Utilitza el nostre mapa o busca per província.': 'En Veggiexque te ayudamos a encontrar restaurantes 100% vegetarianos y veganos en tu zona. Utiliza nuestro mapa o busca por provincia.'
-'Veggiexque home': 'Inicio Veggiexque'
-"Si et ve de gust anar a un restaurant 100% vegetarià, en veggiexque podràs trobar-los tots. Selecciona una província \n            amb el desplegable o fes una cerca amb la localitat, província o restaurant que t'interessa.": "Si te apetece ir a un restaurante 100% vegetariano, en veggiexque podrás encontrarlos todos. Selecciona una provincia \n            con el desplegable o haz una búsqueda con la localidad, provincia o restaurante que te interese."
-"Si ens hem deixat algun restaurant per incloure o vols notificar un tacament, utilitza la secció \n            \"contacte\" per fer-nos-ho saber.": "Si nos hemos dejado algún restaurante por incluir o quieres notificar un error, utiliza la sección \n            \"contacto\" para hacérnoslo saber."
-'Gràcies per utilitzar veggiexque!': '¡Gracias por usar veggiexque!'
+'En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la província de ': 'En Veggiexque te ayudamos a encontrar restaurantes 100% vegetarianos y veganos en la provincia de'
+'Restaurants 100% vegetarians en ': 'Restaurantes 100% vegetarianos en'
+'No hi ha restaurants vegetarians en ': 'No hay restaurantes vegetarianos en'
+'Adreça: ': 'Dirección:'
+'Telèfon: ': 'Teléfono:'
+'En Veggixque t’ajudem a trobar restaurants 100% vegetarians i vegans en la teua zona. Utilitza el nostre mapa o busca per província.': 'En Veggixque te ayudamos a encontrar restaurantes 100% vegetarianos y veganos en tu zona. Utiliza nuestro mapa o busca por provincia.'
+'Veggiexque home': '__Veggiexque home'
+"Si et ve de gust anar a un restaurant 100% vegetarià, en veggiexque podràs trobar-los tots. Selecciona una província \n            amb el desplegable o fes una cerca amb la localitat, província o restaurant que t'interessa.": "Si te apetece ir a un restaurante 100% vegetariano, en veggiexque podrás encontrarlos todos. Selecciona una provincia \n            con el desplegable o haz una búsqueda con la localidad, provincia o restaurante que te interesa."
+"Si ens hem deixat algun restaurant per incloure o vols notificar un tacament, utilitza la secció \n            \"contacte\" per fer-nos-ho saber.": "Si nos hemos dejado algún restaurante por incluir o quieres notificar un cierre, utilitza la sección \n            \"contacto\" para hacérnoslo saber."
+'Gràcies per utilitzar veggiexque!': 'Gracias por utilizar veggiexque!'
 Província: Provincia
+'Buscar restaurants...': 'Buscar restaurantes...'
 Contacte: Contacto
 Blog: Blog
+Enviar: Enviar
 'està registrat baix una llicència': 'está registrado bajo una licencia'
-'Veggiexque: Restaurants vegetarians i vegans per província i prop teu': 'Veggiexque: Restaurantes vegetarianos y veganos por provincia y cerca de ti'
+'Veggiexque: Restaurants vegetarians i vegans per província i prop teu': 'Veggiexque: Restaurantes vegetarianos y veganos por provincia y cerca tuyo'
 'Entrevistes i reportatges sobre restaurants vegetarians.': 'Entrevistas y reportajes sobre restaurantes vegetarianos.'
-'Veggiexque blog': 'Blog de Veggiexque'
-Pròximament: Próximamente
+'Veggiexque blog': 'Veggiexque blog'
+Pròximament: Póximamente
+'Posa’t en contacte amb Veggiexque per afegir restaurants a la nostra llista.': 'Ponte en contacto con Veggiexque para añadir restaurantes a nuestra lista.'
+'Veggiexque contacte': 'Veggiexque contacto'
+"Contactan's per informar-nos d'algun error en la nostra llista de restaurants o per fer qualsevol altre suggeriment. Moltes gràcies!": 'Contáctanos para informarnos de algún error en nuestra lista de restaurantes o para hacer cualquier otra sugerencia. ¡Muchas gracias!'
+E-mail: E-mail
+Missatge: Mensaje
+'En Veggiexque t’ajudem a trobar restaurants 100% vegetarians i vegans en la província de': 'En Veggiexque te ayudamos a encontrar restaurantes 100% vegetarianos y veganos en la provincia de'
+'Restaurants 100% vegetarians en': 'Restaurantes 100% vegetarianos en'
+'No hi ha restaurants vegetarians en': 'No hay restaurantes vegetarianos en'
+'Adreça:': 'Dirección:'
+'Telèfon:': 'Teléfono:'
+"Si ens hem deixat algun restaurant per incloure o vols notificar un tancament, utilitza la secció \n            \"contacte\" per fer-nos-ho saber.": "Si nos hemos dejado algún restaurante sin incluir o quieres notificar un cierre, utiliza la sección \n            \"contacto\" para hacérnoslo saber."
+'Posat en contacte amb Veggiexque per afegir restaurants a la nostra llista.': 'Ponte en contacto con Veggiexque para añadir restaurantes a nuestra lista.'
