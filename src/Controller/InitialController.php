@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 final class InitialController extends AbstractController
 {
@@ -22,20 +23,24 @@ final class InitialController extends AbstractController
         ]);
     }
     #[Route('/{_locale}', name: 'app_home')]
-    public function index(ProvinceRepository $provinceRepository): Response
+    public function index(ProvinceRepository $provinceRepository, TranslatorInterface $translator): Response
     {
         $sentences = [
-            "Perquè ja has menjat massa truita de patata",
-            "Perquè apartar una anxova no és cuinar vegetarià",
-            "Perquè la tonyina no és vegetal",
-            "Perquè... \"I peix en menges?\"",
-            "Perquè t'han servit el gazpatxo amb pernil després de dir que ets vegetarià",
-            "Perquè hi ha gent que cuina vegetarià de qualitat",
-            "Perquè no volem que tanquen més restaurants vegetarians!",
-            "Perquè buscar \"vegetarià\" en google no és cap garantia"
+            'home.sentence.1',
+            'home.sentence.2',
+            'home.sentence.3',
+            'home.sentence.4',
+            'home.sentence.5',
+            'home.sentence.6',
+            'home.sentence.7',
+            
         ];
+
+/*
+*/            
         
         $sentence = $sentences[array_rand($sentences)];
+        $sentence = $translator->trans($sentence, domain: 'messages');
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'InitialController',
