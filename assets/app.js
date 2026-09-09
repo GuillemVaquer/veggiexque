@@ -11,3 +11,11 @@ import './styles/custom.css';
 import 'bootstrap';
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
+
+
+// Import Stimulus if you're using it
+import { startStimulusApp } from '@symfony/stimulus-bridge';
+const app = startStimulusApp();
+
+// Import your custom JavaScript
+console.log('Hello from Webpack Encore!');
