@@ -9,14 +9,10 @@
         <title>{% block title %}{{ "Veggiexque: Restaurants vegetarians i vegans per província i prop teu"|trans }}{% endblock %}</title>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-        <link rel="stylesheet" href="{{ asset('styles/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('styles/custom.css') }}">
         {% endblock %}
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-            <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
         {% endblock %}
         </head>
     <body class="bg-secondary d-flex flex-column">
