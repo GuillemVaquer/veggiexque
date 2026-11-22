@@ -9,7 +9,10 @@ import './styles/app.css';
 
 import './styles/bootstrap.min.css';
 import './styles/custom.css';
-import bannerIntro from './js/banner_effects.js';
+
+import welcomeEffect from './js/welcome_effect.js';
+window.welcomeEffect = welcomeEffect;
+
 import './js/province_dropdown.js';
 //import 'bootstrap';
 
