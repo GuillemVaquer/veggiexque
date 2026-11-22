@@ -9,6 +9,8 @@ import './styles/app.css';
 
 import './styles/bootstrap.min.css';
 import './styles/custom.css';
+import bannerIntro from './js/banner_effects.js';
+import './js/province_dropdown.js';
 //import 'bootstrap';
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');

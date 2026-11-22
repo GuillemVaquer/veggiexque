@@ -37,6 +37,9 @@
     /* Custom Navbar Background Color */
 .navbar {
     background-color: #aab978 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1030 !important;
 }
 
 

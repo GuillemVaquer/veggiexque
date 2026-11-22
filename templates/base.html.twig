@@ -19,6 +19,7 @@
 
     <div class="banner d-flex flex-column align-items-center bg-primary p-3 w-100">
     <h1 class="text-white text-lg text-center display-1 p-3"><a class="text-decoration-none text-white" href={{ path('app_home') }}>Veggiexque</a></h1>
+    </div>
 
     <nav class="navbar navbar-primary navbar-expand-lg w-100">
             <div class="container-fluid justify-content-between">
@@ -27,13 +28,13 @@
             </button>
 
                 <!-- Province dropdown (ALWAYS VISIBLE) -->
-            <div class="dropdown text-center d-lg-none">
+            <div class="dropdown province-dropdown text-center d-lg-none">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ "Província"|trans }}
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     {% for province in provinces %}
-                        <li><a class="dropdown-item" href="{{ path('app_restaurants_by_province', {province: province.slug}) }}">
+                        <li><a class="dropdown-item" data-slug="{{ province.slug }}" href="{{ path('app_restaurants_by_province', {province: province.slug}) }}">
                             {{ province.name }}</a></li>
                     {% endfor %}
                 </ul>
@@ -60,14 +61,14 @@
                         href="{{ path('app_blog') }}">{{ "Blog"|trans }}</a>
                 </div>
 
-                <div class="dropdown text-center d-none d-lg-block">
+                <div class="dropdown province-dropdown text-center d-none d-lg-block">
                     <button class="btn btn-secondary dropdown-toggle {% if app.request.attributes.get('_route') == 'app_restaurants_by_province' %}active{% endif %}" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{"Província"|trans }}
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">    
 
                     {% for province in provinces %}
-                        <li><a class="dropdown-item" href="{{ path('app_restaurants_by_province', {province: province.slug}) }}">
+                        <li><a class="dropdown-item" data-slug="{{ province.slug }}" href="{{ path('app_restaurants_by_province', {province: province.slug}) }}">
                                             {{ province.name }}</a></li>
                     {% endfor %}
                                     
@@ -121,7 +122,6 @@
             </div>    
         </div>        
     </nav>
-    </div>
 
     <div class="container-lg p-3 bg-secondary">
 
